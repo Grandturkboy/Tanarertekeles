@@ -16,7 +16,7 @@ SCALE_QUESTIONS = {
 FINAL_QS = list(range(1, 10))   # questions averaged into the final rating; remove 9 if you don't want it included
 COMMENT_Q = 10
 
-df = pd.read_csv(r"Util\Tanarertekeles\OsztályPerTanár - responses.csv", dtype=str, keep_default_na=False)
+df = pd.read_csv(r"OsztályPerTanár - responses.csv", dtype=str, keep_default_na=False) # <== Ez legyen a kiexportált .csv fájl neve
 df["question_no"] = df["question_no"].astype(int)
 df["timestamp"] = pd.to_datetime(df["timestamp"])
 
