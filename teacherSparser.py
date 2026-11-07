@@ -1,7 +1,7 @@
 import pandas as pd
 
 df = pd.read_csv(
-    r"Tanárok névsora.csv",  # <== Ezt írd át, ha mást a fájlnév
+    r"Tanárok névsora.csv",  # <== Ezt írd át, ha más a fájlnév
     header=None,
     names=["timestamp", "email", "class", "teachers"], 
     skiprows=1
@@ -18,4 +18,4 @@ pairs = (
     .sort_values(["class", "teacher"])
 )
 
-pairs.to_csv(r"OsztályPerTanár.csv", index=False) # <== Ez lesz az elkészünk fájl neve
+pairs.to_csv(r"OsztályPerTanár.csv", index=False) # <== Ez lesz az elkészült fájl neve
